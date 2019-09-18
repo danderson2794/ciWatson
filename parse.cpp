@@ -22,10 +22,12 @@ int main()
             std::string location = "players/";
             location += athleteName;
             output.open(location); 
-            while(file >> input && input != "#")
+            //while(file >> input && input != "#")
+            while(std::getline(file, input) && input.at(0) != '#') 
             {   
-                output << input << " " << std::endl;
+                output << input;// << std::endl;
             }
+            output.close();
         }
          
     } 
