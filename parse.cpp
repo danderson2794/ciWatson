@@ -3,15 +3,14 @@
 #include <fstream>
 #include <string>
 
-using namespace std;
-
 int main()
 {
     std::ifstream file ("ncst2018");
     std::string input, athleteName; 
     while (file >> input)
     {
-//        std::cout << "here\n";
+        // This portion will continue to scan until it finds "Athlete". Once it has found "athlete"
+        //
         if(input == "#" && file >> input && input == "Athlete:")
         {
             file >> input; // grab athlete name
@@ -23,7 +22,7 @@ int main()
             output.open(location); 
             while(file >> input && input != "#")
             {   
-                output << input << " " << endl;
+                output << input << " " << std::endl;
 
             }
         }
