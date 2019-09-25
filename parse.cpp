@@ -32,14 +32,14 @@ int main()
             while(std::getline(file, input) && input.at(0) != '#') 
             {  
                 // We are collecting data every 10th of a second, so I'm trimming away a bunch of data we don't need 
-                if((lineNumbers % 10 == 0) & (lineNumbers != 0)) 
-                {
-                    std::cout << "LineNumber: " << lineNumbers << std::endl;
+             //   if((lineNumbers % 10 == 0) & (lineNumbers != 0)) 
+               // {
+                 //   std::cout << "LineNumber: " << lineNumbers << std::endl;
                     output << input;// << std::endl;
-                    lineNumbers++;
-                }
+               //     lineNumbers++;
+              //  }
 
-                lineNumbers++;
+                //lineNumbers++;
             }
             output.close();
         }
